@@ -1,4 +1,6 @@
 " General Vim settings
+	set nocompatible
+	set autoread
 	syntax on
 	let mapleader=","
 	set autoindent
@@ -7,10 +9,15 @@
 	set dir=/tmp/
 	set relativenumber 
 	set number
+	set bg=dark
+	set list
+	set splitbelow
+	set splitright
+	set scrolloff=5
 
 	autocmd Filetype html setlocal sw=2 expandtab
 	autocmd Filetype javascript setlocal sw=4 expandtab
-
+	
 	set cursorline
 	hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
@@ -36,7 +43,9 @@
 
 	nnoremap vv 0v$
 
-	set listchars=tab:\|\ 
+	"set listchars=tab:\|\ 
+
+	set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 	nnoremap <leader><tab> :set list!<cr>
 	set pastetoggle=<F2>
 	set mouse=a
@@ -64,7 +73,7 @@
 		vnoremap <leader>cout yOstd::cout << <esc>pA << std:endl;
 
 	" C
-		inoremap <leader>out <esc>Iprintf(<esc>A);<esc>2hi
+		inoremap <leader>out <esc>Iprintf(<esc>A);<esc>hi
 		vnoremap <leader>out yOprintf(, <esc>pA);<esc>h%a
 
 	" Typescript
@@ -114,3 +123,5 @@
 	"Swap line
 	"Insert blank below and above
 
+	
+	let g:airline_powerline_fonts = 1

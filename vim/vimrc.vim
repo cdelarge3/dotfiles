@@ -14,6 +14,11 @@
 	set splitbelow
 	set splitright
 	set scrolloff=5
+	set path +=**
+	set wildmenu
+
+	" enable syntax and plugins (for netrw)
+	filetype plugin on
 
 	autocmd Filetype html setlocal sw=2 expandtab
 	autocmd Filetype javascript setlocal sw=4 expandtab

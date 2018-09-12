@@ -35,7 +35,7 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
  	# Custom cd
  	c() {
  		cd $1;
- 		ls -la;
+ 		ls;
  	}
  	alias cd="c"
 
